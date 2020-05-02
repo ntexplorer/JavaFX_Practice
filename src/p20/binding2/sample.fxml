@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0"
+      prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="p20.binding2.Controller">
+    <Label fx:id="firstLabel" text="I love bacon"/>
+    <Label text="${firstLabel.text}"/>
+    <Label text="Difficulty"/>
+    <RadioButton text="Easy">
+        <toggleGroup>
+            <ToggleGroup fx:id="toggleGroup"/>
+        </toggleGroup>
+    </RadioButton>
+    <RadioButton text="Medium" toggleGroup="$toggleGroup"/>
+    <RadioButton text="Hard" toggleGroup="$toggleGroup"/>
+    <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE">
+        <Tab text="Untitled Tab 1">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+        </Tab>
+        <Tab text="Untitled Tab 2">
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0"/>
+        </Tab>
+    </TabPane>
+    <fx:define>
+        <ToggleGroup fx:id="toggleGroup2"/>
+    </fx:define>
+</VBox>

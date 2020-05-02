@@ -1,4 +1,4 @@
-package sample;
+package p19.fxml;
 
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
